@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChatApplication.UI.Controllers.LoginController">
+   <children>
+      <TextField fx:id="userNameField" layoutX="74.0" layoutY="222.0" prefHeight="25.0" prefWidth="280.0" promptText="Enter user name!" AnchorPane.bottomAnchor="149.0" AnchorPane.leftAnchor="74.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="452.0" layoutY="188.0" mnemonicParsing="false" onAction="#choosePicture" prefHeight="25.0" prefWidth="83.0" text="Choose Pic" textFill="#110d0d" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="188.0">
+         <effect>
+            <Glow level="0.0">
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </input>
+            </Glow>
+         </effect>
+      </Button>
+      <Text fill="#8a5050" layoutX="98.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jets chat room" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="74.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="userImage" fitHeight="123.0" fitWidth="142.0" layoutX="422.0" layoutY="37.0" pickOnBounds="true" smooth="false" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="37.0">
+         <image>
+            <Image url="@../Users-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="yallaButton" alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="30.0" prefWidth="83.0" text="Yalla  !!" textFill="#110d0d" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow>
+               <input>
+                  <Lighting>
+                     <light>
+                     </light>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </input>
+            </Glow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
